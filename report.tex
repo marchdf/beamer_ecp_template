@@ -1,0 +1,77 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+%\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+
+%=================================================================================
+% Document information
+\def\firstname{Marc}
+\def\familyname{Henry de Frahan}
+\def\FileAuthor{\firstname~\familyname}
+\def\FileTitle{Beamer ECP template}
+\def\FileSubject{Beamer ECP template}
+\def\FileKeyWords{\firstname~\familyname, \FileSubject, \FileTitle}
+
+%=================================================================================
+% Preamble
+\input{preamble.tex}
+
+\title[]{}
+\author[Marc T. Henry de Frahan]{Marc T. Henry de Frahan}
+\date{\today}
+
+\begin{document}
+\presentation
+
+%=================================================================================
+% Title page
+\bgroup
+\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_title_4x3.jpg}};\end{tikzpicture}}
+%\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_title_16x9.jpg}};\end{tikzpicture}}
+\frame[plain]{
+  \hspace*{0.cm}\begin{minipage}{1\textwidth}
+    \vspace*{1cm}
+    \textbf{\textcolor{black}{\LARGE Beamer ECP template}}\par%
+    \vspace*{5cm}
+    \textbf{\textcolor{black}{\Large M. T. Henry de Frahan}}\\[0.1cm]
+    \textbf{\textcolor{black}{\footnotesize \today}}
+  \end{minipage}
+  \setcounter{framenumber}{0}
+  }
+\egroup
+
+% Everyone has the same background
+\bgroup
+\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_main_4x3.jpg}};\end{tikzpicture}}
+%\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_main_16x9.jpg}};\end{tikzpicture}}
+
+%=================================================================================
+% Motivation/objective
+\frame[plain]{
+  \frametitle{There is a 16x9 and 4x3 format, this is the 4x3.}
+
+  \structure{For 16x9 format:}\\
+  \hspace*{1cm}In \texttt{documentclass}, at top of tex file, add \texttt{aspectratio=169}\\
+  \hspace*{1cm}Change all references of \texttt{*4x3.jpg} to \texttt{*16x9.jpg}
+}
+
+%================================================================================
+% Conclusions
+\frame[plain]{
+  \frametitle{Conclusion\dots}
+
+  A citation to \cite{HenrydeFrahan2015c}\\[0.5cm]
+
+  {\tiny\textit{This research was supported by the Exascale Computing Project (ECP), Project Number: 17-SC-20-SC, a collaborative effort of two DOE organizations -- the Office of Science and the National Nuclear Security Administration -- responsible for the planning and preparation of a capable exascale ecosystem -- including software, applications, hardware, advanced system engineering, and early testbed platforms -- to support the nation's exascale computing imperative.}\par}
+
+}
+
+%=================================================================================
+% Bibliography
+\begin{frame}[allowframebreaks,plain]{Bibliography}
+  \tiny
+  \bibliographystyle{model1-num-names}
+  \bibliography{./library}
+\end{frame}
+
+\egroup
+
+\end{document}
