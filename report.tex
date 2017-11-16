@@ -38,6 +38,23 @@
   }
 \egroup
 
+%=================================================================================
+% Alt title page
+\bgroup
+\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_title_alt_4x3.jpg}};\end{tikzpicture}}
+%\setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_title_alt_16x9.jpg}};\end{tikzpicture}}
+\frame[plain]{
+  \hspace*{0.cm}\begin{minipage}{1\textwidth}
+    \vspace*{1cm}
+    \textbf{\textcolor{black}{\LARGE Another title page}}\par%
+    \vspace*{5cm}
+    \textbf{\textcolor{black}{\Large M. T. Henry de Frahan}}\\[0.1cm]
+    \textbf{\textcolor{black}{\footnotesize \today}}
+  \end{minipage}
+  \setcounter{framenumber}{0}
+  }
+\egroup
+
 % Everyone has the same background
 \bgroup
 \setbeamertemplate{background}{\begin{tikzpicture}\node at (0,0){};\node[inner sep=0,opacity=1]{\includegraphics[width=1\paperwidth,height=1\paperheight]{./figs/ecp_main_4x3.jpg}};\end{tikzpicture}}
